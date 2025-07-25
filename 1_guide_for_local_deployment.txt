@@ -1,0 +1,99 @@
+dir1. Create a folder on Desktop named "streamlit" and create a file named "my_app.py" inside it.
+
+open conda terminal or command terminal and cd to this "streamlit" folder we have created
+
+2. Create virtual environment
+
+                              a. method 1: from anaconda promt
+
+- to create conda environment:
+   	conda create -n env_name 
+   	conda env list
+
+- to create conda environment with specific version of python (if you will install requirements.txt file, it is not recommended):
+	conda create -n env_name python=3.9.16
+
+- to create conda environment with pip
+	conda create -n env_name pip
+
+- to create conda environment with pip and specific version of python
+	conda create -n python=3.7 env_name pip
+
+- to activate environment:
+   	conda activate env_name
+  	source activate env_name (mac users)
+  	
+- to deactivate environment:
+   	conda deactivate  (for windows users)
+   	source deactivate (for mac users)
+
+- to delete/remove environment with all packages:
+   	conda remove --name env_name --all
+       
+
+                              b. method 2: from terminal (vscode, command promt, gitbash, mac terminal)
+
+- to create environment:
+   	python -m venv env_name (windows)
+   	python3 -m venv env_name (mac terminal)
+
+- to activate environment:
+   	env_name/Scripts/activate (vscode)
+   	source env_name/Scripts/activate (gitbash)
+   	source env_name/bin/activate (mac terminal use "bin" instead of Scripts) 
+
+- to deactivate environment:
+   	deactivate (for vscode or gitbash)
+
+- to delete/remove environment:
+   	rm -rf env_name (for vscode, gitbash, mac users)
+
+- If required install and upgrade pip package
+	python.exe -m pip install --upgrade pip
+
+  
+ c. method 3 : from anaconda navigator
+
+- create environment (by mouse)
+- no activation required
+- select environment we created and go Home page
+- install jupyter Notebook into the environment and go back Environments page
+- click on the green arrow next to the environment name and select "Open with Jupyter Notebook"
+- upload your files here and open terminal
+- run the following code on terminal to see all environments
+     
+  	conda install nb_conda_kernels
+
+- close terminal and Jupyter Notebook and then go environment and reopen Jupyter Notebook on it
+- open your ipynb file and select kernel
+- open app file and start to work with them
+  
+  
+3. add packages into venv
+
+  a. method 1: 
+
+   pip install streamlit==1.22.0
+   pip install scikit-learn==1.2.2
+
+or 
+ 
+   b. method 2:       
+   (if you already have requirements.txt file)
+    
+    pip install -r requirements.txt
+
+    pip list (to see the packages we installed)
+    pip freeze > requirements1.txt (to create requirements1.txt file)
+   
+   
+    to see Python version: python -V
+
+4. to run application file
+   streamlit run my_app.py
+
+
+
+
+
+
